@@ -1,0 +1,212 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Layout */
+body {
+    font-family: "Barlow", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1;
+    background: #ffffff;
+}
+
+header {
+    background: #000000;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 10px;
+    text-decoration: none;
+}
+
+section {
+    padding: 10px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input, form textarea, form button {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+/* Masonry Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: 350px; /* This sets a base row height; images will expand based on their content */
+    gap: 1rem;
+}
+
+.gallery-item {
+    grid-row: span 1;
+    display: flex;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h2 {
+    text-align: center;
+}
+/* Navigation bar styles */
+nav {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Basic navigation bar styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #000000; /* Initial text color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.5em 1em; /* Adds spacing around the text */
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Hover effect: square background and inverted colors */
+nav ul li a:hover {
+    background-color: #000000; /* Background color on hover */
+    color: #ffffff; /* Text color on hover to invert */
+    border-radius: 4px; /* Optional: rounded corners, adjust as needed */
+}
+
+header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    color: #aaa; /* Optional: subtle color change on hover */
+}
+header {
+    padding-bottom: 5px; /* Adds some spacing between the content and the line */
+    border-bottom: 5px solid #ffffff; /* Adjust color and thickness as desired */
+}
+.gallery-item {
+    position: relative; /* Allows overlay positioning */
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Shows a pointer on hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay effect */
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Initial transparent overlay */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.gallery-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay on hover */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+/* Lightbox styling */
+#lightbox {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+#lightbox .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1001;
+}
