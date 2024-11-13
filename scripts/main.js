@@ -17,11 +17,11 @@ function openLightbox(imageSrc) {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
 
-    lightboxImg.src = imageSrc; // Set the image source to the clicked image
-    lightbox.style.display = 'flex'; // Show the lightbox
+    lightboxImg.src = imageSrc;
+    lightbox.style.display = 'flex';
 }
 
 function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
-    lightbox.style.display = 'none'; // Hide the lightbox
+    lightbox.style.display = 'none';
 }
