@@ -210,15 +210,22 @@ header {
     cursor: pointer;
     z-index: 1001;
 }
-.filter-buttons button {
-    margin: 5px;
-    padding: 8px 16px;
-    background-color: #ddd;
-    border: none;
-    cursor: pointer;
+/* General nav styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    position: relative;
 }
 
-.filter-buttons button.active {
-    background-color: #333;
-    color: #fff;
+nav ul li {
+    position: relative;
+}
+
+/* Arrow styling */
+.dropdown-arrow {
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-left: 5px;
 }
