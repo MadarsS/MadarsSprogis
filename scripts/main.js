@@ -25,25 +25,3 @@ function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
     lightbox.style.display = 'none';
 }
-// Function to open the lightbox with the selected image
-function openLightbox(imageSrc) {
-    // Create the lightbox overlay
-    const lightboxOverlay = document.createElement('div');
-    lightboxOverlay.className = 'lightbox-overlay';
-
-    // Create the image element for the lightbox
-    const lightboxImage = document.createElement('img');
-    lightboxImage.src = imageSrc;
-    lightboxImage.className = 'lightbox-image';
-
-    // Append image to the overlay
-    lightboxOverlay.appendChild(lightboxImage);
-
-    // Close lightbox on overlay click
-    lightboxOverlay.onclick = function() {
-        document.body.removeChild(lightboxOverlay);
-    };
-
-    // Append the overlay to the body
-    document.body.appendChild(lightboxOverlay);
-}
