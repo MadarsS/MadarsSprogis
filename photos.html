@@ -22,11 +22,32 @@
     </nav>
 
     <section id="gallery">
+        <h2>Photos</h2>
+    
+        <div class="filter-buttons">
+            <button onclick="filterGallery('all')">All</button>
+            <button onclick="filterGallery('black-and-white')">Black and White</button>
+            <button onclick="filterGallery('color')">Color</button>
+            <button onclick="filterGallery('school')">School</button>
+            <button onclick="filterGallery('other')">Other</button>
+        </div>
+    
         <div class="gallery-grid">
-            <div class="gallery-item"  onclick="openLightbox('images/photos/photo1.jpg')">
-                <img src="images/graphicdesign/photo1.jpg">
+            <div class="gallery-item" data-category="black-and-white" onclick="openLightbox('images/photos/photo1.png')">
+                <img src="images/photos/photo1.png" alt="B&W">
             </div>
-        </section>
+            <div class="gallery-item" data-category="color" onclick="openLightbox('images/photos/photo2.jpg')">
+                <img src="images/photos/photo2.jpg" alt="Color photo 1">
+            </div>
+            <div class="gallery-item" data-category="school" onclick="openLightbox('school_image1.jpg')">
+                <img src="https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/school_image1.jpg" alt="School photo 1">
+            </div>
+            <div class="gallery-item" data-category="other" onclick="openLightbox('other_image1.jpg')">
+                <img src="https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/other_image1.jpg" alt="Other photo 1">
+            </div>
+            <!-- Add more gallery items as needed, with appropriate data-category values -->
+        </div>
+    </section>
 
 </body>
 </html>

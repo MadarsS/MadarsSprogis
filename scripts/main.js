@@ -25,3 +25,10 @@ function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
     lightbox.style.display = 'none';
 }
+// Function to handle active filter button styling
+document.querySelectorAll('.filter-buttons button').forEach(button => {
+    button.addEventListener('click', function() {
+        document.querySelector('.filter-buttons .active')?.classList.remove('active');
+        this.classList.add('active');
+    });
+});

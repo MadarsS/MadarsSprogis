@@ -210,3 +210,15 @@ header {
     cursor: pointer;
     z-index: 1001;
 }
+.filter-buttons button {
+    margin: 5px;
+    padding: 8px 16px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.filter-buttons button.active {
+    background-color: #333;
+    color: #fff;
+}
