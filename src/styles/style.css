@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Barlow", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    line-height: 1;
+    background: #ffffff;
+}
+
+section {
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input, form textarea, form button {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* ... rest of the global styles (lightbox, gallery, etc.) ... */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+}
